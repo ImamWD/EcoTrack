@@ -6,6 +6,7 @@ const bodyparser = require('body-parser')
 //Router config
 const UsersRoutes = require('./api/routes/users');
 const WeatherRoutes = require('./api/routes/weather');
+const EduRoutes = require('./api/routes/Edu');
 
 //Settings
 app.use(morgan('dev'));
@@ -14,6 +15,7 @@ app.use(bodyparser.json());
 //Apis Router
 app.use('/users', UsersRoutes);
 app.use('/weather', WeatherRoutes);
+app.use('/edu', EduRoutes);
 
 
 

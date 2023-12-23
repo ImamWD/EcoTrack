@@ -106,14 +106,13 @@ router.post('/', (req, res, next) => {
       });  
     });
 });
-
 // Update weather info ----------------------------------------------
 router.put('/', (req, res, next) => {
  // Validate inputs 
  const { weather_id, happened_date , Temperature , Humidity , Wind_Speed , Wind_Direction , Weather_Conditions_Desc , Pressure  , Visibility  , Sunrise , Sunset } = req.body;
   
  if (!weather_id) {
-   return res.status(400).json({ error: 'no user id' });
+   return res.status(400).json({ error: 'no weather id' });
  }
 
  // Construct the weather object
@@ -219,8 +218,7 @@ router.put('/', (req, res, next) => {
  });
 });
 });
-
-// Delete user
+// Delete user ------------------------------------------------------
 router.delete('/', (req, res, next) => {
   
   const wheather_id = req.body.weather_id;
