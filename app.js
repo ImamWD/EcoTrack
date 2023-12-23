@@ -9,7 +9,9 @@ const WeatherRoutes = require('./api/routes/weather');
 const EduRoutes = require('./api/routes/Edu');
 const ReportRoutes = require('./api/routes/report');
 const FeedbackRoutes = require('./api/routes/feedback');
+const ConcRoutes = require('./api/routes/conc');
 
+ConcRoutes
 //Settings
 app.use(morgan('dev'));
 app.use(bodyparser.urlencoded({extended: false}));
@@ -21,6 +23,8 @@ app.use('/weather', WeatherRoutes);
 app.use('/edu', EduRoutes);
 app.use('/report', ReportRoutes);
 app.use('/feedback', FeedbackRoutes);
+app.use('/conc', ConcRoutes);
+
 
 // handlling a global errors
 app.use((req , res , next) =>{
