@@ -8,6 +8,7 @@ const UsersRoutes = require('./api/routes/users');
 const WeatherRoutes = require('./api/routes/weather');
 const EduRoutes = require('./api/routes/Edu');
 const ReportRoutes = require('./api/routes/report');
+const FeedbackRoutes = require('./api/routes/feedback');
 
 //Settings
 app.use(morgan('dev'));
@@ -19,6 +20,7 @@ app.use('/users', UsersRoutes);
 app.use('/weather', WeatherRoutes);
 app.use('/edu', EduRoutes);
 app.use('/report', ReportRoutes);
+app.use('/feedback', FeedbackRoutes);
 
 // handlling a global errors
 app.use((req , res , next) =>{
