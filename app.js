@@ -10,6 +10,8 @@ const EduRoutes = require('./api/routes/Edu');
 const ReportRoutes = require('./api/routes/report');
 const FeedbackRoutes = require('./api/routes/feedback');
 const ConcRoutes = require('./api/routes/conc');
+const LoginRoutes = require('./api/routes/login');
+
 
 ConcRoutes
 //Settings
@@ -24,6 +26,8 @@ app.use('/edu', EduRoutes);
 app.use('/report', ReportRoutes);
 app.use('/feedback', FeedbackRoutes);
 app.use('/conc', ConcRoutes);
+app.use('/login', LoginRoutes);
+
 
 
 // handlling a global errors
