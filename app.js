@@ -5,6 +5,7 @@ const bodyparser = require('body-parser')
 
 //Router config
 const UsersRoutes = require('./api/routes/users');
+const WeatherRoutes = require('./api/routes/weather');
 
 //Settings
 app.use(morgan('dev'));
@@ -12,6 +13,7 @@ app.use(bodyparser.urlencoded({extended: false}));
 app.use(bodyparser.json());
 //Apis Router
 app.use('/users', UsersRoutes);
+app.use('/weather', WeatherRoutes);
 
 
 
