@@ -17,8 +17,7 @@ const formattedDate = `${year}-${month}-${day}`;
 // Get all reports ------------------------------------------------
 router.get('/', (req, res, next) => {
   const { report_id } = req.body;
-  // if Date = 0 => get all weathers info for this location
-  const weather =
+  const report =
   {
     report_id,
   };
