@@ -46,5 +46,13 @@ router.get('/', (req, res, next) => {
 });
 });
 
+
+router.route("/"  , (req , res)=>{
+  const {client_id , rate , comments ,created_at , updated_at} = req.body ;
+  if(client_id || rate|| comments ){
+    
+  }
+});
+
 // run configration for this file
 module.exports = router;
