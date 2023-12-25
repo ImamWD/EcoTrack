@@ -19,7 +19,8 @@ router.get("/", (req, res) => {
   
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(sevenDaysAgo.getDate() + 7);
-  console.log(sevenDaysAgo);
+  // console.log(sevenDaysAgo);
+  console.log(currentDate);
 
   
   const formattedDate = new Date().toISOString().split('T')[0];

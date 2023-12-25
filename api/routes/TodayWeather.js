@@ -11,24 +11,10 @@ const formattedDate = `${year}-${month}-${day}`;
 
 
 router.get("/" , (req ,res)=>{
-    const location_id   = req.body.location_id; 
+    const location_id   = req.body.location_id;   
 
-    const weather =
-  {
-    location_id,
-    formattedDate,
-  };
-    var ls = ''
-    location_id.forEach((el ,index, array) => {
-        ls += el;
-    if(index != location_id.length-1)
-    {
-        ls +=' ,'
-    }
-  });
-    
-    let sql = 'SELECT * FROM weather_info WHERE location_id =? && happened_date =?'; 
-    db.query(sql ,[ls , formattedDate],(err , result)=>{
+    let sql = 'SELECT * FROM weather_info WHERE location_id =? and happened_date =?'; 
+    db.query(sql ,[location_id , formattedDate],(err , result)=>{
     if(err){
       console.error("Internal Error in database " + err ) ; 
       return res.status(500).send("Internal server error");
@@ -36,8 +22,9 @@ router.get("/" , (req ,res)=>{
       console.log('no errors in database');
       console.log(result);
       console.log(formattedDate);
-      return res.status(200).json(result);
+      return res.status(200).json(result[0]);
     }
+    
     });
 });
 
