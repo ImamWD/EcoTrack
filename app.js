@@ -11,6 +11,8 @@ const ReportRoutes = require('./api/routes/report');
 const FeedbackRoutes = require('./api/routes/feedback');
 const ConcRoutes = require('./api/routes/conc');
 const LoginRoutes = require('./api/routes/login');
+const TodayWeather = require('./api/routes/TodayWeather');
+const SevenDayWeather = require('./api/routes/SevenDayWeather');
 
 
 ConcRoutes
@@ -27,6 +29,8 @@ app.use('/report', ReportRoutes);
 app.use('/feedback', FeedbackRoutes);
 app.use('/conc', ConcRoutes);
 app.use('/login', LoginRoutes);
+app.use('/TodayWeather' , TodayWeather);
+app.use('/SevenDayWeather' ,SevenDayWeather);
 
 
 
