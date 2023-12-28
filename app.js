@@ -19,6 +19,7 @@ const SevenDayWeather = require('./api/routes/SevenDayWeather');
 const showalert = require('./api/routes/showLocationAlert');
 const showConcerentAlert = require('./api/routes/showConcerentAlert');
 const allUsersSameConcerents = require('./api/routes/allusersSameConcerents');
+const ScoreforLocations = require('./api/routes/RankForloctions');
 ConcRoutes
 //Settings
 app.use(morgan('dev'));
@@ -41,6 +42,7 @@ app.use('/SevenDayWeather' ,SevenDayWeather);
 app.use('/LocationAlert' , showalert);
 app.use('/conerentAlert' , showConcerentAlert);
 app.use('/usersConcerents' ,allUsersSameConcerents);
+app.use('/score' , ScoreforLocations);
 
 
 // handlling a global errors
